@@ -1,61 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
-
-/*! base css start */
-
-* {
-    margin: 0;
-}
-
-body {
-    height: 100vh;
-    font-family: 'Electrolize', sans-serif;
-}
-
-
-/*! base css end */
-
-.navbar {
-    background-color: #000;
-    height: 60px;
-    color: #fff;
-    position: sticky;
-    top: 0;
-}
-
-.navbar-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 0 50px;
-}
-
-.logo {
-    color: #ff0000;
-    font-size: 30px;
-}
-
-.menu-list {
-    display: flex;
-    list-style: none;
-    column-gap: 30px;
-}
-
-.menu-list-item {
-    cursor: pointer;
-}
-
-.menu-list-item:hover {
-    font-weight: bold;
-}
-
-.menu-list-item.active {
-    font-weight: bold;
-}
-
-.sidebar {
-    background-color: #000;
-    color: white;
-    height: 100%;
-    width: 50px;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+    /*! base css start */
+    
+    * {
+        margin: 0;
+    }
+    
+    body {
+        font-family: 'Electrolize', sans-serif;
+    }
+    /*! base css end */
+    /*! navbar css start */
+    
+    .navbar {
+        background-color: #000;
+        height: 60px;
+        color: #fff;
+        position: sticky;
+        top: 0;
+    }
+    
+    .navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 50px;
+    }
+    
+    .logo {
+        color: #ff0000;
+        font-size: 30px;
+    }
+    
+    .menu-list {
+        display: flex;
+        list-style: none;
+        column-gap: 30px;
+    }
+    
+    .menu-list-item {
+        cursor: pointer;
+    }
+    
+    .menu-list-item:hover {
+        font-weight: bold;
+    }
+    
+    .menu-list-item.active {
+        font-weight: bold;
+    }
+    
+    .profile-container {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+    }
+    
+    .profil-picture {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    
+    .profile-text-container {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        line-height: 1px;
+    }
+    
+    .toggle {
+        width: 40px;
+        background-color: #fff;
+        position: relative;
+        height: 20px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .toggle-icon {
+        color: goldenrod;
+    }
+    
+    .toggle-ball {
+        width: 18px;
+        height: 18px;
+        background-color: #000;
+        border-radius: 50%;
+        cursor: pointer;
+        position: absolute;
+        right: 1px;
+    }
+    /*! navbar css end */
+    /*! sidebar css start */
+    
+    .sidebar {
+        background-color: #000;
+        color: white;
+        height: 100%;
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        row-gap: 40px;
+        position: fixed;
+        top: 0;
+    }
+    
+    .sidebar i {
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    /*! sidebar css end */
+    /*! featured css start */
+    
+    .content-wrapper {
+        margin-left: 50px;
+    }
+    
+    .featured-content {
+        background: url(../img/spiderman.jpg);
+        padding: 50px;
+        height: calc(100vh - 160px);
+        background-size: 100% 100%;
+    }
+    
+    .featured-title {
+        width: 400px;
+    }
+    
+    .featured-desc {
+        width: 500px;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        margin: 30px 0px;
+    }
+    /*! featured css end */
