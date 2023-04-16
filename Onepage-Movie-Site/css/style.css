@@ -84,17 +84,18 @@ body {
 
 .toggle {
     width: 40px;
+    height: 20px;
     background-color: #fff;
     position: relative;
-    height: 20px;
     border-radius: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .toggle-icon {
     color: goldenrod;
+    font-size: 15px;
 }
 
 .toggle-ball {
@@ -105,6 +106,7 @@ body {
     cursor: pointer;
     position: absolute;
     right: 1px;
+    transition: .5s ease all;
 }
 
 
@@ -120,6 +122,7 @@ body {
     width: 50px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-top: 60px;
     row-gap: 40px;
     position: fixed;
@@ -164,7 +167,8 @@ body {
 
 .featured-buttons {
     display: flex;
-    column-gap: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .featured-buttons button {
@@ -200,6 +204,7 @@ body {
     color: #fff;
     padding: 7px 0;
     width: 125px;
+    border-radius: 4px;
 }
 
 
@@ -219,10 +224,13 @@ body {
     display: flex;
     align-items: center;
     column-gap: 30px;
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
 }
 
 .movie-list-wrapper {
     overflow: hidden;
+    position: relative;
 }
 
 .movie-item {
@@ -274,9 +282,9 @@ body {
 
 .movie-item-buttons i {
     cursor: pointer;
-    opacity: .5;
+    opacity: 0.5;
     font-size: 20px;
-    transition: .5s all ease;
+    transition: 0.5s all ease;
 }
 
 .movie-item-buttons i:hover {
@@ -285,5 +293,88 @@ body {
     font-size: 20px;
 }
 
+.arrow {
+    width: 100px;
+    display: flex;
+    font-size: 120px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    opacity: 0.5;
+    transition: 0.5s ease all;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    opacity: 1;
+}
+
 
 /*! movie list end */
+
+
+/*! dark mode start  */
+
+.container.active {
+    background-color: #fff;
+}
+
+.navbar.active {
+    background-color: #fff;
+    color: #000;
+}
+
+.sidebar.active {
+    background-color: #fff;
+}
+
+.sidebar i.active {
+    color: #000;
+}
+
+.movie-list-title.active {
+    color: #000;
+}
+
+.toggle.active {
+    background-color: #000;
+}
+
+.toggle-ball.active {
+    background-color: #fff;
+    transform: translateX(-20px);
+}
+
+.movie-list-filter select.active {
+    background-color: #fff;
+    color: #000;
+}
+
+
+/*! dark mode end  */
+
+
+/*! responsive start  */
+
+@media only screen and (max-width:800px) {
+    .menu-container {
+        display: none;
+    }
+    .featured-content {
+        height: 50vh;
+    }
+    .featured-title {
+        width: 200px;
+    }
+    .featured-desc {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        max-width: 200px;
+        padding: 0;
+    }
+}
+
+
+/*! responsive end  */
